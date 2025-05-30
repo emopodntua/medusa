@@ -3,7 +3,8 @@
 # MEDUSA: A Multimodal Deep Fusion Multi-Stage Training Framework for Speech Emotion Recognition in Naturalistic Conditions
 
 
-[Georgios Chatzichristodoulou*], [Despoina Kosmopoulou*], [Antonios Kritikos*], [Anastasia Pouloupoulou], [Efthymios Georgiou], [Athanasios Katsamanis], [Vassilis Katsouros], [Alexandros Potamianos]<br />
+[Georgios Chatzichristodoulou*], [Despoina Kosmopoulou*], [Antonios Kritikos*], [Anastasia Pouloupoulou], [Efthymios Georgiou],<br />
+[Athanasios Katsamanis], [Vassilis Katsouros], [Alexandros Potamianos]<br />
 🏫 [ECE, NTUA](http://ece.ntua.gr/), 🏫 [Archimedes, Athena RC](https://archimedesai.gr/en/), 🏫 [ILSP, Athena RC](https://www.ilsp.gr/en/home-2/)
 
 *Equal contribution
