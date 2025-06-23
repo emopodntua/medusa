@@ -1,0 +1,4 @@
+FileName,Angry,Sad,Happy,Surprise,Fear,Disgust,Contempt,Neutral,EmoAct,EmoVal,EmoDom,Split_Set
+MSP-PODCAST_0002_0123.wav,0.0,0.0,0.0,0.0,0.6,0.0,0.0,0.4,4.0,3.8,4.0,Train
+MSP-PODCAST_0003_0123.wav,0.0,0.2,0.2,0.0,0.0,0.3,0.1,0.2,5.2,4.4,5.2,Development
+MSP-PODCAST_0004_0123.wav,0.0,0.2,0.2,0.0,0.0,0.2,0.2,0.2,5.2,4.4,5.2,Test

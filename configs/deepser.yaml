@@ -1,0 +1,48 @@
+seed: 42  # Random seed for reproducibility
+
+features:
+  - ./audio_feats/wavlm-large
+  - ./audio_feats/whisper-large-v3
+  - ./text_feats/ASR-roberta-large
+
+mlp_outs: # MLP output dimensions for each feature plus one for the final output
+  - 512
+  - 512
+  - 512
+  - 512
+
+# Pooling method
+pooling: mean  # Options: mean
+
+dataset_type: Full # Options: Train, Development, Test, Final (train + test), Full (train + dev + test)
+
+# Training parameters
+training:
+  batch_size: 32
+  accumulation_steps: 2 # param update every batch_size * accumulation_steps samples
+  learning_rate: 1.0e-5
+  epochs: 50
+  mixup: 0.3 # mixup probability (0.0 for no mixup, 1.0 for certain mixup)
+  patience: 8 # Number of epochs to wait for improvement until early stopping
+  switch_epoch: 4 # Epoch to switch from unbalanced to balanced training
+
+# Loss parameters
+loss:
+  l1: 1.5  # loss weight for categorical loss
+  l2: 0.4  # loss weight for attribute loss
+  alpha: 0.5 # exponent of class weight tensor, (N/(|C|*f_c))^alpha
+
+paths:
+  # CSV paths
+  label_path: ./labels/balanced_soft_labels_multi_new.csv # Contains all labels (even XO, i.e., ambiguous ones)
+  label_no_XO_path: ./labels/balanced_soft_labels_multi_no_XO.csv # Contains only non-ambiguous labels
+  label_only_XO_path: ./labels/balanced_soft_labels_multi_XO.csv # Contains only ambiguous labels
+
+  # resume training from checkpoint path
+  # (omit to train from scratch)
+  # model_ckpt_path: ./ckpts/deepser1-f1_0.0615-ep_1.pt
+  # dir to store model checkpoints
+  model_output_dir: ./ckpts
+  # model name (e.g., deepser1), stored inside output_path
+  model_name: deepser1
+  csv_output_dir: ./results
