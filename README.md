@@ -2,6 +2,9 @@
   
 # MEDUSA: A Multimodal Deep Fusion Multi-Stage Training Framework for Speech Emotion Recognition in Naturalistic Conditions
 
+🥇 **Ranked 1st in Task 1: Categorical Emotion Recognition in the Interspeech 2025: [Speech Emotion Recognition in Naturalistic
+Conditions Challenge](https://lab-msp.com/MSP-Podcast_Competition/IS2025/)**
+
 [![📄 Paper](https://img.shields.io/badge/Paper-arXiv%3A2506.09556-blue)](https://arxiv.org/abs/2506.09556)
 
 [Georgios Chatzichristodoulou](https://scholar.google.com/citations?hl=en&user=QkMD1BkAAAAJ)\*, [Despoina Kosmopoulou](https://scholar.google.com/citations?user=roxd-tsAAAAJ)\*, [Antonios Kritikos](https://scholar.google.com/citations?user=Ra0Zwb0AAAAJ&hl=en)\*, Anastasia Poulopoulou, [Efthymios Georgiou](https://scholar.google.com/citations?hl=en&user=5Sc6GvEAAAAJ),<br />
@@ -36,12 +39,12 @@ Hyperparameters used in training are configured in a ```.yaml``` file.
 
 ## DeepSER
 ```bash
-python3 train_deepser.py ./configs/deepser.yaml
+python train_deepser.py ./configs/deepser.yaml
 ```
 
 ## Meta-classifier
 ```bash
-python3 train_metacls.py ./configs/metacls.yaml
+python train_metacls.py ./configs/metacls.yaml
 ```
 
 # 📊 Evaluation
@@ -49,12 +52,12 @@ Hyperparameters used in evaluation are configured in a ```.yaml``` file.
 
 ## DeepSER
 ```bash
-python3 eval_deepser.py ./configs/deepser.yaml
+python eval_deepser.py ./configs/deepser.yaml
 ```
 
 ## Meta-classifier
 ```bash
-python3 eval_metacls.py ./configs/metacls.yaml
+python eval_metacls.py ./configs/metacls.yaml
 ```
 
 
